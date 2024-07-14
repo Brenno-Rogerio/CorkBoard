@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{css/CorkBoardCSS.css}" /> 
+        <title>CorkBoard Web</title>
+        <meta charset="UTF-8"></meta>
+    </head>
+    <body>
+        <div class="row"> 
+            <div class="col-md-1"></div>
+            <div class="col-md-2" > 
+                <article class="rounded">
+                    <div>
+                        <button type="button" class="btn btn-primary buttonStyle">Novo Projeto</button>
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-primary buttonStyle">Novo Quadro</button>
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-primary buttonStyle">Excluir Projeto</button>
+                    </div>
+                    <hr/>
+                    <hr/>
+                    <div>
+                        <button type="button" class="btn btn-primary buttonStyle">Projeto 1</button> 
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-primary buttonStyle">Projeto 2</button> 
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-primary buttonStyle">Projeto 3</button> 
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-primary buttonStyle">Projeto 4</button> 
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-primary buttonStyle">Projeto 5</button> 
+                    </div>
+                </article>
+            </div> 
+            <div class="col-md-8"> 
+                <article class="rounded"> 
+                    <div>
+                        <nav class="rounded">
+                            <form>
+                                <button type="button" class="btn btn-primary buttonStyle3">Editar Nome</button>
+                                <button type="button" class="btn btn-primary buttonStyle3">Novo Cartão</button>
+                                <button type="button" class="btn btn-primary buttonStyle3 floatRight">Excluir</button>
+                                <input class="form-control inputLimiter"></input>
+                            </form>
+                            <br/>
+                            
+                            <h1>A fazer:</h1>
+                            
+                            <button type="button" class="btn btn-primary buttonStyle2">Classes de controle</button> 
+                            <button type="button" class="btn btn-primary buttonStyle2">API REST</button>
+                            <button type="button" class="btn btn-primary buttonStyle2">Validação (JavaScript)</button>
+
+                        </nav>
+                        <br/>
+                        <nav class="rounded">
+                            <form>
+                                <button type="button" class="btn btn-primary buttonStyle3">Editar Nome</button>
+                                <button type="button" class="btn btn-primary buttonStyle3">Novo Cartão</button>
+                                <button type="button" class="btn btn-primary buttonStyle3 floatRight">Excluir</button>
+                                <input class="form-control inputLimiter"></input>
+                            </form>
+                            <br/>
+                            
+                            <h1>Sendo feito:</h1>
+                            
+                            <button type="button" class="btn btn-primary buttonStyle2">Plano de Teste</button> 
+                        </nav>
+                        <br/>
+                        <nav class="rounded">
+                            <form>
+                                <button type="button" class="btn btn-primary buttonStyle3">Editar Nome</button>
+                                <button type="button" class="btn btn-primary buttonStyle3">Novo Cartão</button>
+                                <button type="button" class="btn btn-primary buttonStyle3 floatRight">Excluir</button>
+                                <input class="form-control inputLimiter"></input>
+                            </form>
+                            <br/>
+                            
+                            <h1>Feito:</h1>
+                            
+                            <button type="button" class="btn btn-primary buttonStyle2">Paginas HTML e CSS</button> 
+                        </nav>
+                    </div>
+                </article>
+            </div> 
+            <div class="col-md-1"></div>
+        </div> 
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
+    </body>
+</html>

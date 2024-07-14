@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{css/CorkBoardCSS.css}" /> 
+        <title>CorkBoard Web</title>
+        <meta charset="UTF-8"></meta>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <header class="col-md-4">
+                <center>
+                    <form>
+                        <label for="nome">Nome:</label>
+                        <br/>
+                        <input class="form-control inputLimiter" id="nome" value="Paginas HTML e CSS"></input>
+                        <br/>
+                        <label for="desc">Descrição:</label>
+                        <br/>
+                        <textarea class="form-control" rows="7" id="desc">Criar paginas HTML e CSS para o projeto</textarea>
+                        <br/>
+                        <label for="quadro">Quadro:</label>
+                        <br/>
+                        <select class="form-control inputLimiter" id="quadro"></select>
+                        <br/>
+                        <button class="btn btn-primary buttonStyle3">Salvar</button>
+                        <button class="btn btn-primary buttonStyle3">Excluir</button>
+                    </form>
+                </center>
+            </header>
+            <div class="col-md-4"></div>
+        </div>
+        
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    </body>
+</html>
