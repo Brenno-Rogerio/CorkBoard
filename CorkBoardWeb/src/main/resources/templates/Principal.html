@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
         <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
-        <link rel="stylesheet" th:href="@{css/CorkBoardCSS.css}" /> 
+        <link rel="stylesheet" th:href="@{/css/CorkBoardCSS.css}" /> 
         <title>CorkBoard Web</title>
         <meta charset="UTF-8"></meta>
     </head>
@@ -13,17 +13,29 @@
             <div class="col-md-2" > 
                 <article class="rounded">
                     <div>
-                        <button type="button" class="btn btn-primary buttonStyle">Novo Projeto</button>
+                        <input type="hidden" name="idUser" id="idUser" th:value="${idUser}"/>
+                        <input type="hidden" name="idProj" id="idProj" value="0"/>
+                        <button onclick="novoProjeto()" type="button" class="btn btn-primary buttonStyle">Novo Projeto</button>
                         <br/>
                         <br/>
-                        <button type="button" class="btn btn-primary buttonStyle">Novo Quadro</button>
+                        <button onclick="deleteProjeto()" type="button" class="btn btn-primary buttonStyle">Excluir Projeto</button>
                         <br/>
                         <br/>
-                        <button type="button" class="btn btn-primary buttonStyle">Excluir Projeto</button>
+                        <hr/>
+                        <hr/>
+                        <h1 id="currProjeto">Nenhum projeto selecionado</h1>
+                        <br/>
+                        <button onclick="novoQuadro()" type="button" class="btn btn-primary buttonStyle">Novo Quadro</button>
+                        <br/>
+                        <br/>
+                        <button onclick="updateProjeto()" type="button" class="btn btn-primary buttonStyle">Renomear Projeto</button>
+                        <br/>
+                        <br/>
+                        <input id="novoProjName" class="form-control"></input>
                     </div>
                     <hr/>
                     <hr/>
-                    <div>
+                    <div id="projetoDiv">
                         <button type="button" class="btn btn-primary buttonStyle">Projeto 1</button> 
                         <br/>
                         <br/>
@@ -42,56 +54,14 @@
             </div> 
             <div class="col-md-8"> 
                 <article class="rounded"> 
-                    <div>
-                        <nav class="rounded">
-                            <form>
-                                <button type="button" class="btn btn-primary buttonStyle3">Editar Nome</button>
-                                <button type="button" class="btn btn-primary buttonStyle3">Novo Cartão</button>
-                                <button type="button" class="btn btn-primary buttonStyle3 floatRight">Excluir</button>
-                                <input class="form-control inputLimiter"></input>
-                            </form>
-                            <br/>
-                            
-                            <h1>A fazer:</h1>
-                            
-                            <button type="button" class="btn btn-primary buttonStyle2">Classes de controle</button> 
-                            <button type="button" class="btn btn-primary buttonStyle2">API REST</button>
-                            <button type="button" class="btn btn-primary buttonStyle2">Validação (JavaScript)</button>
-
-                        </nav>
-                        <br/>
-                        <nav class="rounded">
-                            <form>
-                                <button type="button" class="btn btn-primary buttonStyle3">Editar Nome</button>
-                                <button type="button" class="btn btn-primary buttonStyle3">Novo Cartão</button>
-                                <button type="button" class="btn btn-primary buttonStyle3 floatRight">Excluir</button>
-                                <input class="form-control inputLimiter"></input>
-                            </form>
-                            <br/>
-                            
-                            <h1>Sendo feito:</h1>
-                            
-                            <button type="button" class="btn btn-primary buttonStyle2">Plano de Teste</button> 
-                        </nav>
-                        <br/>
-                        <nav class="rounded">
-                            <form>
-                                <button type="button" class="btn btn-primary buttonStyle3">Editar Nome</button>
-                                <button type="button" class="btn btn-primary buttonStyle3">Novo Cartão</button>
-                                <button type="button" class="btn btn-primary buttonStyle3 floatRight">Excluir</button>
-                                <input class="form-control inputLimiter"></input>
-                            </form>
-                            <br/>
-                            
-                            <h1>Feito:</h1>
-                            
-                            <button type="button" class="btn btn-primary buttonStyle2">Paginas HTML e CSS</button> 
-                        </nav>
+                    <div id="quadroDiv">
                     </div>
                 </article>
             </div> 
             <div class="col-md-1"></div>
         </div> 
-        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/principalJS.js}"></script>
     </body>
 </html>

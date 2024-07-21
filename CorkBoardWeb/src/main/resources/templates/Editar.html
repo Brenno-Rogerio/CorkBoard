@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
         <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
-        <link rel="stylesheet" th:href="@{css/CorkBoardCSS.css}" /> 
+        <link rel="stylesheet" th:href="@{/css/CorkBoardCSS.css}" /> 
         <title>CorkBoard Web</title>
         <meta charset="UTF-8"></meta>
     </head>
@@ -12,27 +12,26 @@
             <div class="col-md-4"></div>
             <header class="col-md-4">
                 <center>
+                    <input id="idCard" type="hidden" name="idCard" th:value="${idCard}"/>
+                    <input id="idUser" type="hidden" name="idUser" th:value="${idUser}"/>
                     <form>
-                        <label for="nome">Nome:</label>
+                        <label>Nome:</label>
                         <br/>
-                        <input class="form-control inputLimiter" id="nome" value="Paginas HTML e CSS"></input>
+                        <input id="nome" class="form-control inputLimiter"></input>
                         <br/>
-                        <label for="desc">Descrição:</label>
+                        <label>Descrição:</label>
                         <br/>
-                        <textarea class="form-control" rows="7" id="desc">Criar paginas HTML e CSS para o projeto</textarea>
+                        <textarea id="descricao" class="form-control" rows="7"></textarea>
                         <br/>
-                        <label for="quadro">Quadro:</label>
-                        <br/>
-                        <select class="form-control inputLimiter" id="quadro"></select>
-                        <br/>
-                        <button class="btn btn-primary buttonStyle3">Salvar</button>
-                        <button class="btn btn-primary buttonStyle3">Excluir</button>
+                        <button onclick="updateCard()" class="btn btn-primary buttonStyle3">Salvar</button>
+                        <button onclick="deleteQuadro()" class="btn btn-primary buttonStyle3">Excluir</button>
                     </form>
                 </center>
             </header>
             <div class="col-md-4"></div>
         </div>
-        
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/editarJS.js}"></script>
     </body>
 </html>

@@ -11,18 +11,8 @@ import java.util.ArrayList;
 
 @Controller
 public class MiscController {
-    @GetMapping("/Principal") 
-    public String mostrarPrincipal(){ 
-        return "Principal"; 
-    } 
-    
     @GetMapping("/Login") 
-    public String mostrarLogin(){ 
+    public String mostrarPrincipal(){ 
         return "Login"; 
-    } 
-    
-    @GetMapping("/Editar") 
-    public String mostrarEditar(){ 
-        return "Editar"; 
-    } 
+    }  
 }

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
         <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
-        <link rel="stylesheet" th:href="@{css/CorkBoardCSS.css}" /> 
+        <link rel="stylesheet" th:href="@{/css/CorkBoardCSS.css}" /> 
         <title>CorkBoard Web</title>
         <meta charset="UTF-8"></meta>
     </head>
@@ -31,14 +31,16 @@
                         <br/>
                         <input class="form-control inputLimiter" id="senha"></input>
                         <br/>
-                        <button class="btn btn-primary buttonStyle3">Entrar</button>
-                        <button class="btn btn-primary buttonStyle3">Cadastrar</button>
+                        <button onclick="login()" class="btn btn-primary buttonStyle3">Entrar</button>
+                        <button onclick="isUserUnique()" class="btn btn-primary buttonStyle3">Cadastrar</button>
                     </form>
                 </center>
             </header>
             <div class="col-md-4"></div>
         </div>
         
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/loginJS.js}"></script>
     </body>
 </html>
